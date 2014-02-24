@@ -26,12 +26,12 @@
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/d2lte/include
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/d2
+TARGET_KERNEL_SOURCE        := kernel/samsung/d2dcm
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE           := 0x80200000
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01300000
 BOARD_KERNEL_PAGESIZE       := 2048
-TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
+TARGET_KERNEL_CONFIG        := cyanogen_d2dcm_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
@@ -100,5 +100,5 @@ BOARD_USES_SEPERATED_VOIP := true
 
 ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 # Assert
-TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2tmo,d2cri,d2mtr,d2usc,d2vzw,d2lte
+TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2tmo,d2cri,d2mtr,d2usc,d2vzw,d2dcm,d2lte
 endif
