@@ -20,7 +20,11 @@
 # details, it only fundamentally contains two inherit-product
 # lines, full and maguro, hence its name.
 #
- 
+
+# Default Locale
+	ro.product.locale.language=ja \
+	ro.product.locale.region=JP
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from d2lte device
