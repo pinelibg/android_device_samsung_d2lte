@@ -22,6 +22,9 @@ $(call inherit-product-if-exists, vendor/samsung/d2lte/d2lte-vendor.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2lte/overlay
 
+## overlays for dcm
+DEVICE_PACKAGE_OVERLAYS += device/samsung/d2lte/overlay-dcm
+
 # Boot animation and screen size
 
 ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
